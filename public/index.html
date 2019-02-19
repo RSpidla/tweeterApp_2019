@@ -1,33 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Meta Information -->
-    <title>Tweeter - Home Page</title>
+<head>
+  <meta charset="utf-8">
+  <title>Tweeter SPA (Single Page App)</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- External CSS -->
-    <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Oswald:200,300,400,500" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
 
-    <!-- App CSS -->
-    <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
+  <!-- App CSS -->	
+  <link rel="stylesheet" href="/styles/app.css" type="text/css" />
 
-    <!-- External JS -->
-    <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
+</head>
+<body class="primary primary--full-width">
 
-    <!-- App JS -->
-    <script type="text/javascript" src="/scripts/app.js"></script>
-  </head>
+  <header class="primary__header">
+    <img class="bird" src="/images/bird.png" >
+    <a href="index.html" class="logo">Tweeter Project</a>
+    <input class="menu-btn" type="checkbox" id="menu-btn" />
+    <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+    <ul class="menu">
+        <li class="compose"><a href="#" class="compose-icon" id="compose-button">Compose Tweet</a></li>
+    </ul>
+  </header> <!-- /.primary__header -->
 
-  <body>
+  <main class="primary__main">
 
-    <!-- Top nav bar (fixed) -->
-    <nav id="nav-bar">
-      <img class="logo" src="/images/bird.png" width="80px" height="80px">
-      <span class="header">Tweeter</span>
-    </nav>
+    <div id="slider">
 
-    <!-- Page-specific (main) content here -->
-    <main class="container">
-    </main>
+      <section class="new_tweet">
 
-  </body>
+          <h2>Compose Tweet</h2>
+
+          <div id="form-messages"></div>
+
+          <form method="POST" action="/tweets/" id="ajax-tweet">
+
+              <textarea id ="text_area" name="text" rows="4" placeholder="What are you humming about?"></textarea>
+
+              <input type="submit" value="Tweet" class="btn" id="submit">
+
+          </form>
+
+          <div class ="counter">
+            <strong>You have <em id="count"></em> characters remaining</strong>
+          </div>
+
+        </section><!-- /.new_tweet -->
+
+      
+
+        <section class="tweets" id="tweets">
+            
+        </section><!-- /.tweets -->
+
+      </div><!-- /#slider-->
+
+  </main> <!-- /.primary__main -->
+
+  <footer class="primary__footer">
+
+    <div class="copyright">
+      2019 <a href="/">Lighthouse Labs</a>, Calgary Canada
+    </div>
+
+  </footer> <!-- /.primary__footer -->
+
+  <!-- JS -->
+  <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
+  <script type="text/javascript" src="/scripts/app.js" ></script>
+  <script type="text/javascript" src="/scripts/char-counter.js"></script>
+
+</body>
 </html>
