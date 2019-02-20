@@ -157,6 +157,7 @@ $(document).ready(function() {
       // Clear the web form.
       $('#text_area').val('');
 
+      // Reset value of character counter
       $('#count').text('140');
 
       // count.text(maxCharacters - characters);
