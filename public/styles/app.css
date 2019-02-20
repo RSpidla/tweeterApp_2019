@@ -22,8 +22,10 @@ Date Updated:   19/02/16
 06. Footer
     ├── Copyright
     └── Media Queries
-07. Form
-    └── Media Queries
+07. New Tweet
+		├── Form
+			└── Error Messages		
+		└── Counter
 08. Button
 
 
@@ -55,6 +57,12 @@ Date Updated:   19/02/16
 ========================================================================== */
 /* ==========================================================================
 01. Variables \ Brand Secondary Colour (2)
+========================================================================== */
+/* ==========================================================================
+01. Variables \ Brand Secondary Colour 3
+========================================================================== */
+/* ==========================================================================
+01. Variables \ Brand Secondary Colour 4
 ========================================================================== */
 /* ==========================================================================
 01. Variables \ Brand UI Colours
@@ -294,7 +302,8 @@ a:focus.edit {
   position: fixed;
   z-index: 9;
   top: 0;
-  width: 100%;
+  width: calc(100% - 20px);
+  padding: 0 10px;
   background-color: white;
   -webkit-box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.15);
   box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.15);
@@ -332,13 +341,12 @@ a:focus.edit {
 .primary__header .menu-btn:hover,
 .primary__header li a:focus,
 .primary__header .menu-btn:hover {
-  background-color: #f4f4f4;
   color: #FB6428;
 }
 .primary__header .bird {
   float: left;
   display: block;
-  margin: 5px 0 0 15px;
+  margin: 5px 0 0 5px;
   padding: 5px;
   width: 40px;
   height: 40px;
@@ -358,7 +366,7 @@ a:focus.edit {
 .primary__header .logo {
   display: block;
   float: left;
-  padding: 20px;
+  padding: 20px 20px 20px 10px;
   border-bottom: none;
   font: 500 14px/20px "Oswald", Arial, sans-serif;
   text-decoration: none;
@@ -376,7 +384,6 @@ a:focus.edit {
 }
 .primary__header .logo:hover,
 .primary__header .logo:focus {
-  background: #F4F4F4;
   color: #FB6428;
 }
 /* ============================================================================= 
@@ -386,6 +393,8 @@ a:focus.edit {
   clear: none;
   float: right;
   max-height: none;
+  position: relative;
+  right: -10px;
 }
 /* NEW */
 /* ============================================================================= 
@@ -471,7 +480,7 @@ a:focus.edit {
 08. Button
 ================================================================================ */
 /* ============================================================================= 
-07. Tweet \
+07. New Tweet
 ================================================================================ */
 .new_tweet {
   display: none;
@@ -505,7 +514,7 @@ a:focus.edit {
   color: red;
 }
 /* ============================================================================= 
-07. Tweet \ Form
+07. New Tweet \ Form
 ================================================================================ */
 .new_tweet textarea {
   width: calc(100% - 20px);
@@ -525,7 +534,7 @@ a:focus.edit {
   background: white;
 }
 .new_tweet input[type=submit] {
-  display: block;
+  display: inline-block;
   cursor: pointer;
 }
 #text_area_feedback {
@@ -534,8 +543,12 @@ a:focus.edit {
   text-transform: uppercase;
   text-align: right;
 }
+.btn.btn__tweet {
+  width: 200px;
+  padding: 5px;
+}
 /* ============================================================================= 
-07. Tweet \ Form \ Error Messages
+07. New Tweet \ Form \ Error Messages
 ================================================================================ */
 #form-messages.error,
 #form-messages.success {
@@ -544,23 +557,29 @@ a:focus.edit {
   color: #263238;
 }
 /* ============================================================================= 
-07. Tweet \ Form Elements
+07. New Tweet \ New Tweet \ Counter
 ================================================================================ */
 .new_tweet .counter {
+  float: right;
   display: inline-block;
-  width: 100%;
-  margin: 10px 0 0;
+  margin: 5px 0 0;
+  padding: 8px 10px;
+  background: #F7F7F7;
+  font: 500 20px/1.4em "Oswald", Arial, sans-serif;
+  letter-spacing: -0.0125em;
+  text-shadow: 0 1px rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(0, 0, 0, 0.15);
   color: #263238;
   font: normal 300 16px/1.4em "Oswald", Arial, sans-serif;
 }
 .new_tweet .counter span {
-  color: #FB6428;
+  text-align: right;
 }
 .user_msg_limit {
   color: #D8000C;
 }
 /* ============================================================================= 
-08. Tweet \ Card \
+08. Tweet
 ================================================================================ */
 .tweet {
   display: block;
@@ -725,7 +744,7 @@ a:focus.edit {
   color: #FB6428;
 }
 .tweet .twitter_links a:visited {
-  color: #FB6428;
+  color: #1693A5;
 }
 .tweet .twitter_links li span {
   display: none;
@@ -863,7 +882,7 @@ a:focus.edit {
 .success-msg,
 .warning-msg,
 .error-msg {
-  font: normal 300 16px/1.4em "Oswald", Arial, sans-serif;
+  font: normal 400 18px/1.4em "Oswald", Arial, sans-serif;
 }
 .info-msg {
   color: #059;
