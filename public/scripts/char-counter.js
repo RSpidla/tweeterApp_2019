@@ -6,7 +6,7 @@ $(document).ready(function(){
   maxCharacters = 140;
 
   // 3. Pass '#count' to '.text()' method and set 'maxCharacters' as parameter
-    // 
+    // Prepare to compare count from DOM to counter function
   $('#count').text(maxCharacters);
 
   // 4. Bind 'keyup' & 'keydown' events to 'textarea' 
@@ -29,7 +29,8 @@ $(document).ready(function(){
       count.removeClass('user_msg_limit');
     }
     
-    // 8. Initialize variable for 'count' and set '#count'
+    // 8. Compare '#count' from DOM to 'maxCharacters'
+      // Return value of characters remaining in character limit
     count.text(maxCharacters - characters);
 
   });
