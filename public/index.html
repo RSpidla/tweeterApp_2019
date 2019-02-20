@@ -34,18 +34,22 @@
           <h2>Compose Tweet</h2>
 
           <div id="form-messages"></div>
+          
+            <form method="POST" action="/tweets/" id="ajax-tweet">
 
-          <form method="POST" action="/tweets/" id="ajax-tweet">
+                <textarea id ="text_area" name="text" rows="4" placeholder="What are you humming about?"></textarea>
 
-              <textarea id ="text_area" name="text" rows="4" placeholder="What are you humming about?"></textarea>
+                <div class="new_tweet__btns">
 
-              <input type="submit" value="Tweet" class="btn" id="submit">
+                  <input type="submit" value="Tweet" class="btn btn__tweet" id="submit">
 
-          </form>
+                  <div class="counter">
+                    <span>You have <em id="count"></em> characters remaining</span>
+                  </div>
 
-          <div class ="counter">
-            <strong>You have <em id="count"></em> characters remaining</strong>
-          </div>
+              </div>
+
+            </form>
 
         </section><!-- /.new_tweet -->
 
