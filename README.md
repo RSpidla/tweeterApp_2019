@@ -25,12 +25,12 @@ Details: a Single Page App (SPA) built with HTML, CSS, JS, jQuery and AJAX on th
 
 ## <span style="color:#1693A5">Project Screenshots</span>
 
-* [Tweeter](https://github.com/RSpidla/tweeterApp_2019/blob/master/docs/Tweeter.jpg)
-* [Web Form: Textarea on Focus](https://github.com/RSpidla/tweeterApp_2019/blob/master/docs/Tweeter_New_Tweet-Text_Area_Focused.jpg)
-* [Web Form on Hover: Textarea on Focus](https://github.com/RSpidla/tweeterApp_2019/blob/master/docs/Tweeter_New_Tweet-On_Hover-Text_Area_Focused.jpg)
-* [Web Form: Success Message](https://github.com/RSpidla/tweeterApp_2019/blob/master/docs/Tweeter_User_Message-Tweet_Sent_Success.jpg)
-* [Web Form: Error Message, Content not Present](https://github.com/RSpidla/tweeterApp_2019/blob/master/docs/Tweeter_User_Message-Tweet_Content_Not_Present.jpg)
-* [Web Form: Error Message, Content too Long](https://github.com/RSpidla/tweeterApp_2019/blob/master/docs/Tweeter_User_Message-Tweet_Content_Too_Long.jpg)
+* [Tweeter](https://github.com/RSpidla/tweeterApp_2019/blob/master/docs/Tweeter.jpg?raw=true)
+* [Web Form: Textarea on Focus](https://github.com/RSpidla/tweeterApp_2019/blob/master/docs/Tweeter_New_Tweet-Text_Area_Focused.jpg?raw=true)
+* [Web Form on Hover: Textarea on Focus](https://github.com/RSpidla/tweeterApp_2019/blob/master/docs/Tweeter_New_Tweet-On_Hover-Text_Area_Focused.jpg?raw=true)
+* [Web Form: Success Message](https://github.com/RSpidla/tweeterApp_2019/blob/master/docs/Tweeter_User_Message-Tweet_Sent_Success.jpg?raw=true)
+* [Web Form: Error Message, Content not Present](https://github.com/RSpidla/tweeterApp_2019/blob/master/docs/Tweeter_User_Message-Tweet_Content_Not_Present.jpg?raw=true)
+* [Web Form: Error Message, Content too Long](https://github.com/RSpidla/tweeterApp_2019/blob/master/docs/Tweeter_User_Message-Tweet_Content_Too_Long.jpg?raw=true)
 
 
 ## <span style="color:#1693A5">Acknowledgments</span>
