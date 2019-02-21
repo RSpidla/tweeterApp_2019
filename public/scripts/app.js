@@ -22,14 +22,20 @@ $(document).ready(function() {
   function createTweetElement(tweetData) {
     
     // 3a. Initialize the variables for 'tweet' markup
+      // 'tweet_avatar' - User Avatar
       // 'tweet_heading' - User Name
       // 'tweet_username' - User Handle
       // 'tweet_content' - Text Content
       // 'tweet_created_at' - Creation Date
+    var tweet_avatar = tweetData.user.avatars["small"];
     var tweet_heading = tweetData.user.name;
     var tweet_username = tweetData.user.handle;
     var tweet_content = tweetData.content.text;
     var tweet_created_at = tweetData.created_at;
+
+    var formatDate= tweet_created_at;
+    var responseDate = moment(formatDate).format('lll');
+
 
     // 3b. Initialize the variable for 'tweet' and construct markup
     var tweet = [
@@ -37,7 +43,7 @@ $(document).ready(function() {
         '<header>',
           '<div class="user left">',
             '<div class="user_image">',
-              '<img src="/images/rs-avatar.png" alt="twitter avatar" class="avatar">',
+              '<img src=' + tweet_avatar + ' alt="twitter avatar" class="avatar">',
             '</div>',
             '<div class="heading">',
               '<h3>' + tweet_heading + '</h3>',
@@ -52,7 +58,7 @@ $(document).ready(function() {
         '</div>',
         '<footer>',
           '<div class="details left">',
-            '<span>' + tweet_created_at + '</span>',
+            '<span>' + responseDate + '</span>',
           '</div>',
           '<div class="details right">',
             '<ul class="twitter_links">',
@@ -108,7 +114,6 @@ $(document).ready(function() {
     // 7d. Reset focus on 'text_area' when slider toggled
     $("#text_area").focus();
   });
-
 
   // 8. Handle form submission
   // 8a. Initialize variable for form and get form data
