@@ -47,13 +47,7 @@ Date Updated:   19/02/20
 		└── Colours
 	11. Helper Classes
 
-
-
-
 */
-
-
-
 
 /* ==========================================================================
 00. Mixins
@@ -510,6 +504,7 @@ a:focus {
 	margin: 0 auto 40px;
 	padding: 20px;
 	width: ~"calc(100% - 40px)";
+	min-height: fit-content;
 	max-width: 500px;
 	background: rgba(255,255,255,.9);
 	border-radius: 4px;
@@ -565,7 +560,7 @@ a:focus {
 }
 
 .btn.btn__tweet {
-	width: 200px;
+	width: 120px;
 	padding: 5px;
 }
 
@@ -588,7 +583,7 @@ a:focus {
 	margin: 10px 0 0;
 	padding: 8px 0;
 	color: @color-grey-1;
-	font: 300 16px/1.4em @sans-serif-primary;
+	font: 300 18px/1.4em @sans-serif-primary;
 	letter-spacing: -0.0125em;
 	text-shadow: 0 1px rgba(255,255,255,0.5);
 	span {
@@ -766,7 +761,6 @@ a:focus {
 		.twitter_links li:last-child {
 			margin: 0;
 		}
-
 }
 
 /* ============================================================================= 
@@ -834,7 +828,7 @@ a:focus {
 ================================================================================ */
 .btn {
 	display:inline-block;
-	margin: 0.313em 0 0;
+	margin: 5px 0;
 	padding: 10px;
 	width: 100%;
 	border: 1px solid rgba(0,0,0,0.15);
