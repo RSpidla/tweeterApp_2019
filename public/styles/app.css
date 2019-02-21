@@ -2,7 +2,7 @@
 
 Description:    CSS for Tweeter App V1.0
 Date Created:   19/02/16
-Date Updated:   19/02/16
+Date Updated:   19/02/20
 
 00. Mixins
 01. Variables
@@ -11,22 +11,40 @@ Date Updated:   19/02/16
     ├── Brand UI Colours
     └── Brand Fonts
 02. Reset
+		└── HTML5 Boilerplate v4.3.0
 03. Layout
     └── Media Queries
 04. Typography
     ├── Legal
     └── Media Queries
 05. Header
-    ├── Menu
+		├── Bird
+		├── Logo
+		├── Menu
+			└── Button
     └── Media Queries
 06. Footer
     ├── Copyright
     └── Media Queries
 07. New Tweet
 		├── Form
-			└── Error Messages		
+			├── Text Area Feedback
+			└── Error Messages
 		└── Counter
-08. Button
+08. Tweet
+		├── Top Left - Tweet Avatar, Heading
+		├── Top Right - Tweet Name, Handle
+		├── Middle - Tweet Status
+		├── Bottom Left - Tweet Details
+		├── Bottom Right - Twitter Links
+		├── Icons
+			└── Load Characters
+		└── Media Queries
+	09. Button
+	10. User Messages
+		├── Icons
+		└── Colours
+	11. Helper Classes
 
 
 
@@ -229,21 +247,6 @@ a:focus {
   color: #A3ACB0;
   text-decoration: none;
 }
-a:link.edit,
-a:visited.edit {
-  color: white;
-  text-decoration: none;
-  -webkit-transition: all 0.3s ease-out;
-  -moz-transition: all 0.3s ease-out;
-  -o-transition: all 0.3s ease-out;
-  -ms-transition: all 0.3s ease-out;
-  transition: all 0.3s ease-out;
-}
-a:hover.edit,
-a:focus.edit {
-  color: #A3ACB0;
-  text-decoration: none;
-}
 /* ============================================================================= 
 04. Typography \ Media Queries
 ================================================================================ */
@@ -343,6 +346,9 @@ a:focus.edit {
 .primary__header .menu-btn:hover {
   color: #FB6428;
 }
+/* ============================================================================= 
+05. Header \ Bird
+================================================================================ */
 .primary__header .bird {
   float: left;
   display: block;
@@ -363,6 +369,9 @@ a:focus.edit {
   height: 50px;
   padding: 0;
 }
+/* ============================================================================= 
+05. Header \ Logo
+================================================================================ */
 .primary__header .logo {
   display: block;
   float: left;
@@ -390,13 +399,12 @@ a:focus.edit {
 05. Header \ Menu
 ================================================================================ */
 .primary__header .menu {
-  clear: none;
-  float: right;
-  max-height: none;
   position: relative;
   right: -10px;
+  float: right;
+  clear: none;
+  max-height: none;
 }
-/* NEW */
 /* ============================================================================= 
 05. Header \ Menu \ Button
 ================================================================================ */
@@ -474,12 +482,6 @@ a:focus.edit {
   }
 }
 /* ============================================================================= 
-06. Main \ Form Elements
-================================================================================ */
-/* ============================================================================= 
-08. Button
-================================================================================ */
-/* ============================================================================= 
 07. New Tweet
 ================================================================================ */
 .new_tweet {
@@ -510,16 +512,13 @@ a:focus.edit {
   color: #263238;
   text-transform: uppercase;
 }
-#text_area_feedback.user_msg_limit {
-  color: red;
-}
 /* ============================================================================= 
 07. New Tweet \ Form
 ================================================================================ */
 .new_tweet textarea {
   width: calc(100% - 20px);
   margin: 0 0 10px;
-  padding: 5px 10px;
+  padding: 10px;
   background: #D4D7D9;
   border: none;
   color: #263238;
@@ -537,11 +536,17 @@ a:focus.edit {
   display: inline-block;
   cursor: pointer;
 }
+/* ============================================================================= 
+07. New Tweet \ Form \ Text Area Feedback
+================================================================================ */
 #text_area_feedback {
   color: #263238;
   font: normal 400 16px/40px "Oswald", Arial, sans-serif;
   text-transform: uppercase;
   text-align: right;
+}
+#text_area_feedback.user_msg_limit {
+  color: red;
 }
 .btn.btn__tweet {
   width: 200px;
@@ -557,20 +562,17 @@ a:focus.edit {
   color: #263238;
 }
 /* ============================================================================= 
-07. New Tweet \ New Tweet \ Counter
+07. New Tweet \ Counter
 ================================================================================ */
 .new_tweet .counter {
   float: right;
   display: inline-block;
-  margin: 5px 0 0;
-  padding: 8px 10px;
-  background: #F7F7F7;
-  font: 500 20px/1.4em "Oswald", Arial, sans-serif;
+  margin: 10px 0 0;
+  padding: 8px 0;
+  color: #263238;
+  font: 300 16px/1.4em "Oswald", Arial, sans-serif;
   letter-spacing: -0.0125em;
   text-shadow: 0 1px rgba(255, 255, 255, 0.5);
-  border: 1px solid rgba(0, 0, 0, 0.15);
-  color: #263238;
-  font: normal 300 16px/1.4em "Oswald", Arial, sans-serif;
 }
 .new_tweet .counter span {
   text-align: right;
@@ -595,16 +597,16 @@ a:focus.edit {
   -o-transition: all 0.3s ease-out;
   -ms-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
-  /* --------- Top Left - Tweet Avatar, Heading --------- */
-  /* --------- Top Right - Tweet Name, Handle --------- */
-  /* --------- Middle - Tweet Status --------- */
-  /* --------- Bottom Left -  --------- */
-  /* --------- Bottom User Right --------- */
+  /* --------- 08. Tweet \ Top Left - Tweet Avatar, Heading --------- */
+  /* --------- 08. Tweet \ Top Right - Tweet Name, Handle --------- */
+  /* --------- 08. Tweet \ Middle - Tweet Status --------- */
+  /* --------- 08. Tweet \ Bottom Left - Tweet Details --------- */
+  /* --------- 08. Tweet \ Bottom Right - Twitter Links --------- */
 }
 .tweet:hover,
 .tweet:focus {
-  box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.9);
   max-width: 560px;
+  box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.9);
 }
 .tweet:hover .twitter_links,
 .tweet:focus .twitter_links {
@@ -753,7 +755,7 @@ a:focus.edit {
   margin: 0;
 }
 /* ============================================================================= 
-08. Tweet \ Card \ Icons
+08. Tweet \ Icons
 ================================================================================ */
 .retweet-icon:before,
 .like-icon:before,
@@ -771,7 +773,7 @@ a:focus.edit {
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
 }
 /* ============================================================================= 
-08.	Tweet \ Card \ Icons \ Load Characters
+08.	Tweet \ Icons \ Load Characters
 ================================================================================ */
 .retweet-icon:before {
   content: "\f079";
@@ -789,7 +791,7 @@ a:focus.edit {
   top: 0px;
 }
 /* ============================================================================= 
-08.	Tweet \ Card \ Media Queries
+08.	Tweet \ Media Queries
 ================================================================================ */
 @media only screen and (max-width: 799px) {
   .tweet .heading {
@@ -810,6 +812,8 @@ a:focus.edit {
   margin: 0.313em 0 0;
   padding: 10px;
   width: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 0px;
   background: #D4D7D9;
   color: #263238;
   font: 500 20px/1.4em "Oswald", Arial, sans-serif;
@@ -820,8 +824,6 @@ a:focus.edit {
   text-decoration: none;
   overflow: hidden;
   cursor: pointer;
-  border: 1px solid rgba(0, 0, 0, 0.15);
-  border-radius: 0px;
   -webkit-transition: all 0.3s ease-out;
   -moz-transition: all 0.3s ease-out;
   -o-transition: all 0.3s ease-out;
@@ -845,12 +847,16 @@ a:focus.edit {
   margin: 10px 0;
   padding: 10px 15px;
   border-radius: 3px 3px 3px 3px;
+  font: normal 400 18px/1.4em "Oswald", Arial, sans-serif;
   -webkit-transition: all 0.3s ease-out;
   -moz-transition: all 0.3s ease-out;
   -o-transition: all 0.3s ease-out;
   -ms-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
 }
+/* ============================================================================= 
+10. User Messages \ Icons
+================================================================================ */
 .info-msg:before,
 .success-msg:before,
 .warning-msg:before,
@@ -878,12 +884,9 @@ a:focus.edit {
 .error-msg:before {
   content: "\f057";
 }
-.info-msg,
-.success-msg,
-.warning-msg,
-.error-msg {
-  font: normal 400 18px/1.4em "Oswald", Arial, sans-serif;
-}
+/* ============================================================================= 
+10. User Messages \ Colours
+================================================================================ */
 .info-msg {
   color: #059;
   background-color: #BEF;

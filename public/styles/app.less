@@ -3,7 +3,7 @@
 
 Description:    CSS for Tweeter App V1.0
 Date Created:   19/02/16
-Date Updated:   19/02/16
+Date Updated:   19/02/20
 
 00. Mixins
 01. Variables
@@ -12,22 +12,40 @@ Date Updated:   19/02/16
     ├── Brand UI Colours
     └── Brand Fonts
 02. Reset
+		└── HTML5 Boilerplate v4.3.0
 03. Layout
     └── Media Queries
 04. Typography
     ├── Legal
     └── Media Queries
 05. Header
-    ├── Menu
+		├── Bird
+		├── Logo
+		├── Menu
+			└── Button
     └── Media Queries
 06. Footer
     ├── Copyright
     └── Media Queries
 07. New Tweet
 		├── Form
-			└── Error Messages		
+			├── Text Area Feedback
+			└── Error Messages
 		└── Counter
-08. Button
+08. Tweet
+		├── Top Left - Tweet Avatar, Heading
+		├── Top Right - Tweet Name, Handle
+		├── Middle - Tweet Status
+		├── Bottom Left - Tweet Details
+		├── Bottom Right - Twitter Links
+		├── Icons
+			└── Load Characters
+		└── Media Queries
+	09. Button
+	10. User Messages
+		├── Icons
+		└── Colours
+	11. Helper Classes
 
 
 
@@ -175,16 +193,7 @@ body.primary {
   min-height: 100vh;
   margin: 0;
   padding: 0;
-	// background: #f7f7f7;
-	
-	// min-height: 100vh;
-	// padding: 0;
-	// margin: 0 !important;
-	// background: url("https://raymondspidla.ca/public/duotone-tiny-app.jpg");
-	// background-size: cover;
-	// background-repeat: no-repeat;
-    // background-position: 50% 50%;
-    background: url("/images/duotone.png") no-repeat center center fixed;
+	background: url("/images/duotone.png") no-repeat center center fixed;
 }
 .primary__main { 
   margin: 60px 40px; 
@@ -265,17 +274,6 @@ a:focus {
 	color: @color-grey-4;  
 	text-decoration: none;
 }
-a:link.edit,
-a:visited.edit {
-	color: white;  
-	text-decoration: none;
-	.transition;
-}
-a:hover.edit,
-a:focus.edit {
-	color: @color-grey-4;  
-	text-decoration: none;
-}
 
 /* ============================================================================= 
 04. Typography \ Media Queries
@@ -334,16 +332,12 @@ a:focus.edit {
   top: 0;
 	width: ~"calc(100% - 20px)";
 	padding: 0 10px;
-	
-	// width: 100%;
   background-color: white;
   -webkit-box-shadow: 1px 2px 4px 0 rgba(0,0,0,.15);
 	box-shadow: 1px 2px 4px 0 rgba(0,0,0,.15);
-	
 	.header-form {
 		display: inline-block;
 		width: 50%;
-
 	}
 }
 .primary__header ul {
@@ -371,9 +365,12 @@ a:focus.edit {
 .primary__header .menu-btn:hover,
 .primary__header li a:focus,
 .primary__header .menu-btn:hover {
-  // background-color: #f4f4f4;
   color: @color-secondary-1-0;
 }
+
+/* ============================================================================= 
+05. Header \ Bird
+================================================================================ */
 .primary__header .bird {
 	float: left;
 	display: block;
@@ -391,6 +388,9 @@ a:focus.edit {
 	}
 }
 
+/* ============================================================================= 
+05. Header \ Logo
+================================================================================ */
 .primary__header .logo {
   display: block;
   float: left;
@@ -407,7 +407,6 @@ a:focus.edit {
   }
   &:hover,
   &:focus {
-    // background: @color-grey-8;
     color: @color-secondary-1-0;
   }
 }
@@ -416,56 +415,12 @@ a:focus.edit {
 05. Header \ Menu
 ================================================================================ */
 .primary__header .menu {
-  clear: none;
-  float: right;
+	position: relative;
+	right: -10px;
+	float: right;
+	clear: none;
 	max-height: none;
-	
-position: relative;
-right: -10px;
-
-
-
 }
-
-
-/* NEW */
-// .lgd_in_msg {
-// 	float: right;
-// 	margin: 20px;
-// 	font: 500 14px/20px "Oswald", Arial, sans-serif;
-// 	text-decoration: none;
-// 	text-transform: uppercase;
-// 	color: @color-grey-1;
-// }
-
-// .logout_form {
-// 	float: right;
-// 	margin: 15px 20px 0;
-// 	color: @color-grey-1;
-
-// 	input[type=submit] {
-// 		display: inline-block;
-// 		width: 100%;
-// 		padding: 5px 10px;
-// 		color: @color-grey-1;
-// 		font: normal 500 14px/1.26em "Oswald", Arial, sans-serif;
-// 		text-transform: uppercase;
-// 		cursor: pointer;
-// 	}
-// }
-
-// .primary__header {
-// 	a:link,
-// 	a:visited {
-// 		color: @color-grey-1;  
-// 		text-decoration: none;
-// 	}
-// 	a:hover,
-// 	a:focus {
-// 		color: @color-primary-0;  
-// 		text-decoration: none;
-// 	}
-// }
 
 /* ============================================================================= 
 05. Header \ Menu \ Button
@@ -547,107 +502,6 @@ right: -10px;
   }
 }
 
-
-/* ============================================================================= 
-06. Main \ Form Elements
-================================================================================ */
-// .primary__main {
-// 	label {
-// 		display: block;
-// 		margin: 0 0 10px;
-// 		font: normal 400 20px/1em "Oswald", Arial, sans-serif;
-// 		text-transform: uppercase;
-// 	}
-// 	input {
-// 		display: block;
-// 		// width: ~"calc(100% - 12px)";
-// 		margin: 0 0 20px 0;
-// 		padding: 6px;
-// 		color: @color-grey-1;  
-// 		font: normal 300 16px/1em "Oswald", Arial, sans-serif;
-// 	}
-// 	input[type=submit] {
-// 		display: block;
-// 		width: 180px;
-// 		margin: 20px 10px 10px 0;
-// 		padding: 10px;
-// 		color: @color-grey-1;
-// 		font: normal 500 16px/1em "Oswald", Arial, sans-serif;
-// 		text-transform: uppercase;
-// 		cursor: pointer;
-// 	}
-
-// 	ul {
-// 		display: inline-block;
-// 		width: 100%;
-// 		margin: 20px 0;
-// 		padding: 0;
-// 		li {
-// 			display: block;
-// 			// margin: 5px 0 20px;
-// 			// padding: 0;
-// 			// font: normal 400 20px/1.0em "Oswald", Arial, sans-serif;
-// 			// color: @color-grey-1;
-// 			form {
-// 				margin: 0 10px 0 0;
-// 			}
-// 		}
-// 	}
-// }
-
-// @media only screen and (max-width: 599px) {
-//   .primary__main {
-//     input[type=submit] {
-// 			display: block;
-// 			width: 100%;
-// 			margin: 20px 0 20px;
-// 			padding: 10px;
-// 		}
-//   }
-// }
-// @media only screen and (max-width: 379px) {
-//   .copyright {
-//     font-size: 12px;
-//   }
-// }
-
-
-
-
-/* ============================================================================= 
-08. Button
-================================================================================ */
-// .btn {
-// 	display:inline-block;
-// 	margin: 0.313em 0 0;
-// 	padding: 10px 0;
-// 	width: 100%;
-// 	background: @color-grey-5;
-// 	color: @color-grey-1;
-// 	font: 500 16px/1.4em @sans-serif-primary;
-// 	letter-spacing: -0.0125em;
-// 	text-shadow: 0 1px rgba(255,255,255,0.5);
-// 	text-transform: uppercase;
-// 	text-align: center;
-// 	text-decoration: none;
-// 	overflow: hidden;
-// 	cursor: pointer;
-// 	border: 1px solid rgba(0,0,0,0.15);
-// 	border-radius: 0px;
-// 	.transition;
-// 	box-shadow:
-// 		inset 0 1px 0 rgba(255,255,255,0.5), 
-// 		0 2px 2px rgba(0,0,0,0.3), 
-// 		0 0 4px 1px rgba(0,0,0,0.2); 
-// }
-// .btn:hover,
-// .btn:focus {
-// 	color: #212224;
-// 	background: @color-grey-4;
-// 	text-decoration: none;
-// }
-
-
 /* ============================================================================= 
 07. New Tweet
 ================================================================================ */
@@ -675,9 +529,6 @@ right: -10px;
 	color: @color-grey-1;
 	text-transform: uppercase;
 }
-#text_area_feedback.user_msg_limit {
-	color: red;
-}
 
 /* ============================================================================= 
 07. New Tweet \ Form
@@ -685,7 +536,7 @@ right: -10px;
 .new_tweet textarea {
 	width: ~"calc(100% - 20px)";
 	margin: 0 0 10px;
-	padding: 5px 10px;
+	padding: 10px;
 	background: @color-grey-5;
 	border: none;
 	color: @color-grey-1;
@@ -699,25 +550,24 @@ right: -10px;
     display: inline-block;
     cursor: pointer;
 }
+
+/* ============================================================================= 
+07. New Tweet \ Form \ Text Area Feedback
+================================================================================ */
 #text_area_feedback {
 	color: @color-grey-1;
 	font: normal 400 16px/40px "Oswald", Arial, sans-serif;
 	text-transform: uppercase;
 	text-align: right;
 }
-
-
-.btn.btn__tweet {
-	// display: inline-block;
-	width: 200px;
-	
-	padding: 5px;
-
+#text_area_feedback.user_msg_limit {
+	color: red;
 }
 
-
-
-
+.btn.btn__tweet {
+	width: 200px;
+	padding: 5px;
+}
 
 /* ============================================================================= 
 07. New Tweet \ Form \ Error Messages
@@ -730,60 +580,21 @@ right: -10px;
 }
 
 /* ============================================================================= 
-07. New Tweet \ New Tweet \ Counter
+07. New Tweet \ Counter
 ================================================================================ */
 .new_tweet .counter {
-	
-	
-	
 	float: right;
 	display: inline-block;
-	margin: 5px 0 0;
-	padding: 8px 10px;
-	
-	background: @color-grey-9;
+	margin: 10px 0 0;
+	padding: 8px 0;
 	color: @color-grey-1;
-	font: 500 20px/1.4em @sans-serif-primary;
+	font: 300 16px/1.4em @sans-serif-primary;
 	letter-spacing: -0.0125em;
 	text-shadow: 0 1px rgba(255,255,255,0.5);
-	
-	border: 1px solid rgba(0,0,0,0.15);
-	// border-radius: 4px;
-	// .transition;
-	
-	
-	
-	
-
-
-
-
-
-
-
-
-
-
-	color: @color-grey-1;
-	font: normal 300 16px/1.4em "Oswald", Arial, sans-serif;
-	
 	span {
 		text-align: right;
-
-
 	}
-
-
-
-
-
-
 }
-
-
-
-
-
 
 .user_msg_limit {
     color: #D8000C;
@@ -804,8 +615,8 @@ right: -10px;
 	.transition;
 		&:hover,
 		&:focus {
-			box-shadow: 0 20px 40px -14px rgba(0,0,0,0.90);
 			max-width: 560px;
+			box-shadow: 0 20px 40px -14px rgba(0,0,0,0.90);
 			.twitter_links {
 				opacity: 1.0;
 			}
@@ -830,7 +641,7 @@ right: -10px;
 			}
 		}
 
-		/* --------- Top Left - Tweet Avatar, Heading --------- */
+		/* --------- 08. Tweet \ Top Left - Tweet Avatar, Heading --------- */
 		.user.left {
 			display: block;
 			float: left;
@@ -861,7 +672,7 @@ right: -10px;
 			}
 		}
 
-		/* --------- Top Right - Tweet Name, Handle --------- */
+		/* --------- 08. Tweet \ Top Right - Tweet Name, Handle --------- */
 		.user.right {
 			display: inline-block;
 			width: 25%;
@@ -876,7 +687,7 @@ right: -10px;
 			color: @color-grey-1;
 		}
 
-		/* --------- Middle - Tweet Status --------- */
+		/* --------- 08. Tweet \ Middle - Tweet Status --------- */
 		.status {
 			margin: 20px;
             color: @color-grey-1;
@@ -885,7 +696,7 @@ right: -10px;
             
 		}
 
-		/* --------- Bottom Left -  --------- */
+		/* --------- 08. Tweet \ Bottom Left - Tweet Details --------- */
 		.details.left {
 			display: block;
 			float: left;
@@ -909,7 +720,7 @@ right: -10px;
 			width: 50%;	
 		}
 
-		/* --------- Bottom User Right --------- */
+		/* --------- 08. Tweet \ Bottom Right - Twitter Links --------- */
 		.twitter_links {
 			margin: 18px 0;
 			padding: 0;
@@ -959,7 +770,7 @@ right: -10px;
 }
 
 /* ============================================================================= 
-08. Tweet \ Card \ Icons
+08. Tweet \ Icons
 ================================================================================ */
 .retweet-icon:before,
 .like-icon:before,
@@ -978,7 +789,7 @@ right: -10px;
 }
 
 /* ============================================================================= 
-08.	Tweet \ Card \ Icons \ Load Characters
+08.	Tweet \ Icons \ Load Characters
 ================================================================================ */
 .retweet-icon:before {
 	content: "\f079";
@@ -996,9 +807,8 @@ right: -10px;
 	top: 0px;
 }
 
-
 /* ============================================================================= 
-08.	Tweet \ Card \ Media Queries
+08.	Tweet \ Media Queries
 ================================================================================ */
 @media only screen and (max-width: 799px) {
 	.tweet {
@@ -1027,6 +837,8 @@ right: -10px;
 	margin: 0.313em 0 0;
 	padding: 10px;
 	width: 100%;
+	border: 1px solid rgba(0,0,0,0.15);
+	border-radius: 0px;
 	background: @color-grey-5;
 	color: @color-grey-1;
 	font: 500 20px/1.4em @sans-serif-primary;
@@ -1037,8 +849,6 @@ right: -10px;
 	text-decoration: none;
 	overflow: hidden;
 	cursor: pointer;
-	border: 1px solid rgba(0,0,0,0.15);
-	border-radius: 0px;
 	.transition;
 	box-shadow:
 		inset 0 1px 0 rgba(255,255,255,0.5), 
@@ -1061,11 +871,14 @@ right: -10px;
 .error-msg {
   margin: 10px 0;
   padding: 10px 15px;
-  border-radius: 3px 3px 3px 3px;
+	border-radius: 3px 3px 3px 3px;
+	font: normal 400 18px/1.4em @sans-serif-primary;
   .transition;
 }
 
-
+/* ============================================================================= 
+10. User Messages \ Icons
+================================================================================ */
 .info-msg:before,
 .success-msg:before,
 .warning-msg:before,
@@ -1081,7 +894,6 @@ right: -10px;
 	left: -5px;
 	text-shadow: 0 1px 1px rgba(0,0,0,0.3);
 }
-
 .info-msg:before {
 	content: "\f05a";
 }
@@ -1095,12 +907,9 @@ right: -10px;
 	content: "\f057";
 }
 
-.info-msg,
-.success-msg,
-.warning-msg,
-.error-msg {
-    font: normal 400 18px/1.4em @sans-serif-primary;
-}
+/* ============================================================================= 
+10. User Messages \ Colours
+================================================================================ */
 .info-msg {
   color: #059;
   background-color: #BEF;
@@ -1117,10 +926,6 @@ right: -10px;
   color: #D8000C;
   background-color: #FFBABA;
 }
-
-
-
-
 
 /* ============================================================================= 
 10. Helper Classes
