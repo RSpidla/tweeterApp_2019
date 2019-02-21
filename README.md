@@ -21,16 +21,37 @@ Details: a Single Page App (SPA) built with HTML, CSS, JS, jQuery and AJAX on th
 
 ## <span style="color:#1693A5">Dev Dependencies</span>
 * [nodemon](https://nodemon.io/) - A utility to monitor for any changes in your source and automatically restart your server.
+* [Less](http://lesscss.org/) - A pre-processor to speed-up CSS development.
 
 
 ## <span style="color:#1693A5">Project Screenshots</span>
 
-* [Tweeter](https://github.com/RSpidla/tweeterApp_2019/blob/master/docs/Tweeter.jpg?raw=true)
+* [Tweeter Home Page](https://github.com/RSpidla/tweeterApp_2019/blob/master/docs/Tweeter.jpg?raw=true)
+
+![Tweeter Home Page](https://github.com/RSpidla/tweeterApp_2019/blob/master/docs/Tweeter.jpg?raw=true)
+
+
 * [New Tweet, Web Form: Textarea on Focus](https://github.com/RSpidla/tweeterApp_2019/blob/master/docs/Tweeter_New_Tweet-Text_Area_Focused.jpg?raw=true)
+
+![New Tweet, Web Form: Textarea on Focus](https://github.com/RSpidla/tweeterApp_2019/blob/master/docs/Tweeter_New_Tweet-Text_Area_Focused.jpg?raw=true)
+
 * [New Tweet, Web Form on Hover: Textarea on Focus](https://github.com/RSpidla/tweeterApp_2019/blob/master/docs/Tweeter_New_Tweet-On_Hover-Text_Area_Focused.jpg?raw=true)
+
+![New Tweet, Web Form on Hover: Textarea on Focus](https://github.com/RSpidla/tweeterApp_2019/blob/master/docs/Tweeter_New_Tweet-On_Hover-Text_Area_Focused.jpg?raw=true)
+
 * [New Tweet, Web Form: Success Message](https://github.com/RSpidla/tweeterApp_2019/blob/master/docs/Tweeter_User_Message-Tweet_Sent_Success.jpg?raw=true)
+
+![New Tweet, Web Form: Success Message](https://github.com/RSpidla/tweeterApp_2019/blob/master/docs/Tweeter_User_Message-Tweet_Sent_Success.jpg?raw=true)
+
 * [New Tweet, Web Form: Error Message, Content not Present](https://github.com/RSpidla/tweeterApp_2019/blob/master/docs/Tweeter_User_Message-Tweet_Content_Not_Present.jpg?raw=true)
+
+![New Tweet, Web Form: Error Message, Content not Present](https://github.com/RSpidla/tweeterApp_2019/blob/master/docs/Tweeter_User_Message-Tweet_Content_Not_Present.jpg?raw=true)
+
+
 * [New Tweet, Web Form: Error Message, Content too Long](https://github.com/RSpidla/tweeterApp_2019/blob/master/docs/Tweeter_User_Message-Tweet_Content_Too_Long.jpg?raw=true)
+
+
+![New Tweet, Web Form: Error Message, Content too Long](https://github.com/RSpidla/tweeterApp_2019/blob/master/docs/Tweeter_User_Message-Tweet_Content_Too_Long.jpg?raw=true)
 
 
 ## <span style="color:#1693A5">Acknowledgments</span>
