@@ -66,12 +66,15 @@ $(document).ready(function() {
       '</article>'
     ].join("\n");
 
-    // 3b. Return 'tweet' markup
+    // 3c. Return 'tweet' markup
     return tweet;
   }
 
   // 4. Declare the function 'renderTweets'
   function renderTweets(tweets) {
+
+    // 4a. Render each 'tweet' with each using 'createTweetElement' 
+    // 4b. Add each 'tweet' to beginning of 'tweets'
     $.each(tweets, function(index, tweet) {
       var tweet_html = createTweetElement(tweet);
       $('.tweets').prepend(tweet_html);
@@ -92,12 +95,17 @@ $(document).ready(function() {
   // 6. Call the function 'loadTweets
   loadTweets();
 
-  // Slide Up Down Function
-  
   // 7. Call the function 'loadTweets
+  // 7a. Set slider to "new_tweet" container
   var slider = $(".new_tweet");
+
+  // 7b. Bind event handler 'click' to '#compose-button'
   $("#compose-button").on('click', function(){
+    
+    // 7c. Toggle slider on 'new_tweet' container
     $(".new_tweet").slideToggle(750,"linear");
+
+    // 7d. Reset focus on 'text_area' when slider toggled
     $("#text_area").focus();
   });
 
@@ -145,7 +153,7 @@ $(document).ready(function() {
     .done(function() {
       
       // Make sure that the web form Messages div has the 'success' class.
-      $(formMessages).removeClass('error-msg');
+      $(formMessages).removeClass('error-m´sg');
       $(formMessages).addClass('success-msg');
       $('.success-msg').delay(3000).fadeOut(400);
 
