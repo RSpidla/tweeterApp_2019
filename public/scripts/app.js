@@ -37,7 +37,7 @@ $(document).ready(function() {
         '<header>',
           '<div class="user left">',
             '<div class="user_image">',
-              '<img src="/images/twitter_avatar_400x400.jpg" alt="twitter avatar" class="avatar" />',
+              '<img src="/images/rs-avatar.png" alt="twitter avatar" class="avatar">',
             '</div>',
             '<div class="heading">',
               '<h3>' + tweet_heading + '</h3>',
@@ -131,7 +131,6 @@ $(document).ready(function() {
     $('.error-msg').delay(5000).fadeOut(400);
       
     // Check the web form data for character length and empty string.
-    // 
     var maxLength = 140;
     var value = $("#text_area").val();
     if (value.length > maxLength) {
@@ -153,7 +152,7 @@ $(document).ready(function() {
     .done(function() {
       
       // Make sure that the web form Messages div has the 'success' class.
-      $(formMessages).removeClass('error-m´sg');
+      $(formMessages).removeClass('error-msg');
       $(formMessages).addClass('success-msg');
       $('.success-msg').delay(3000).fadeOut(400);
 
@@ -176,6 +175,7 @@ $(document).ready(function() {
       $(formMessages).addClass('error-msg');
       $('.error-msg').delay(3000).fadeOut(300);
 
+      // Check response for empty inputs and send either success or user message
       if (data.responseText !== '') {
         $(formMessages).text('Your tweet was sent.');
       } else {
