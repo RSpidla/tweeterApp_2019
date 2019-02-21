@@ -22,7 +22,7 @@ $(document).ready(function() {
   function createTweetElement(tweetData) {
     
     // 3a. Initialize the variables for 'tweet' markup
-      // 'tweet_heading' - Name
+      // 'tweet_heading' - User Name
       // 'tweet_username' - User Handle
       // 'tweet_content' - Text Content
       // 'tweet_created_at' - Creation Date
@@ -96,15 +96,13 @@ $(document).ready(function() {
   
   // 7. Call the function 'loadTweets
   var slider = $(".new_tweet");
-
   $("#compose-button").on('click', function(){
-    $(".new_tweet").slideToggle(500);
-    
+    $(".new_tweet").slideToggle(750,"linear");
+    $("#text_area").focus();
   });
 
 
   // 8. Handle form submission
-
   // 8a. Initialize variable for form and get form data
   var form = $('#ajax-tweet');
 
@@ -159,8 +157,6 @@ $(document).ready(function() {
 
       // Reset value of character counter
       $('#count').text('140');
-
-      // count.text(maxCharacters - characters);
       
       // Reload tweets after submitting the web form.
       loadTweets();
