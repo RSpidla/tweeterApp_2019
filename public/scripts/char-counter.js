@@ -18,7 +18,7 @@ $(document).ready(function(){
     var count = $('#count');
 
     // 6. Initialize variable for 'count' and set to '#count'
-      // Display count value on based on key presses
+      // Display count value based on key presses
     var characters = $(this).val().length;
     
     // 7. Initialize variable for 'count' and set '#count'
