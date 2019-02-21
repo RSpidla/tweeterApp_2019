@@ -2,7 +2,7 @@
 
 ### Tweeter is a simple, single-page Twitter clone.
 
-This repository is the starter code for the project: Students will fork and clone this repository, then build upon it to practice their HTML, CSS, JS, jQuery and AJAX front-end skills, and their Node, Express and MongoDB back-end skills.
+Details: a Single Page App (SPA) built with HTML, CSS, JS, jQuery and AJAX on the client-side, and Node, Express and MongoDB on the server-side.
 
 ## <span style="color:#1693A5">Getting Started</span>
 
@@ -13,44 +13,33 @@ This repository is the starter code for the project: Students will fork and clon
 
 ## <span style="color:#1693A5">Dependencies</span>
 
-* [Node](http://www.dropwizard.io/1.0.2/docs/) - Asynchronous event driven JavaScript runtime
-* [Express](http://expressjs.com/)
-* [body-parser](https://github.com/expressjs/body-parser#readme)
-* [Chance](http://chancejs.com/)
-* [MD5](https://github.com/pvorb/node-md5#readme)
-* [Less](http://lesscss.org/)
-* [xss-escape](https://github.com/DubFriend/xss-escape)
+* [Express](http://expressjs.com/) - Web application server framework
+* [body-parser](https://github.com/expressjs/body-parser#readme) - Node.js body parsing middleware
+* [Chance](http://chancejs.com/) - Generator of random strings and numbers
+* [MD5](https://github.com/pvorb/node-md5#readme) - JavaScript function for hashing messages
+* [mongodb](https://github.com/mongodb/node-mongodb-native) - MongoDB driver for Node.js
 
 ## <span style="color:#1693A5">Dev Dependencies</span>
-* [nodemon](https://nodemon.io/)
+* [nodemon](https://nodemon.io/) - A utility to monitor for any changes in your source and automatically restart your server.
 
 
 ## <span style="color:#1693A5">Project Screenshots</span>
 
-* [Web Form: Textarea on Focus](https://github.com/RSpidla/tweeter_version_2/blob/master/docs/tweeter_webform_textarea_focused.jpg?raw=true)
-* [Web Form on Hover: Textarea on Focus](https://github.com/RSpidla/tweeter_version_2/blob/master/docs/tweeter_webform_hovered.jpg?raw=true)
-* [Web Form: Success Message](https://github.com/RSpidla/tweeter_version_2/blob/master/docs/tweeter_webform_success_message.jpg?raw=true)
-* [Web Form: Error Message, Content not Present](https://github.com/RSpidla/tweeter_version_2/blob/master/docs/tweeter_webform_error_message_not_present.jpg?raw=true)
-* [Web Form: Error Message, Content too Long](https://github.com/RSpidla/tweeter_version_2/blob/master/docs/tweeter_webform_error_message_not_present.jpg?raw=true)
+* [Tweeter](https://github.com/RSpidla/tweeterApp_2019/blob/master/docs/Tweeter.jpg)
+* [Web Form: Textarea on Focus](https://github.com/RSpidla/tweeterApp_2019/blob/master/docs/Tweeter_New_Tweet-Text_Area_Focused.jpg)
+* [Web Form on Hover: Textarea on Focus](https://github.com/RSpidla/tweeterApp_2019/blob/master/docs/Tweeter_New_Tweet-On_Hover-Text_Area_Focused.jpg)
+* [Web Form: Success Message](https://github.com/RSpidla/tweeterApp_2019/blob/master/docs/Tweeter_User_Message-Tweet_Sent_Success.jpg)
+* [Web Form: Error Message, Content not Present](https://github.com/RSpidla/tweeterApp_2019/blob/master/docs/Tweeter_User_Message-Tweet_Content_Not_Present.jpg)
+* [Web Form: Error Message, Content too Long](https://github.com/RSpidla/tweeterApp_2019/blob/master/docs/Tweeter_User_Message-Tweet_Content_Too_Long.jpg)
 
-
-## <span style="color:#1693A5">Versioning</span>
-
-I used [Git](https://git-scm.com/) for versioning. For the versions available, see the [repository](https://github.com/RSpidla/tinyApp_version_2). 
-
-## <span style="color:#1693A5">Authors</span>
-
-* **Raymond Spidla** - [Github Account](https://github.com/RSpidla)
-
-<!-- See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project. -->
-
-## <span style="color:#1693A5">License</span>
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
 
 ## <span style="color:#1693A5">Acknowledgments</span>
 
 * Photo by [rawpixel](https://unsplash.com/@rawpixel/) on [Unsplash](https://unsplash.com)
+
+## <span style="color:#1693A5">Authors</span>
+
+* **Raymond Spidla** - [Github Account](https://github.com/RSpidla) - :computer::two_hearts::two_hearts:
 
 ## <span style="color:#1693A5">Versioning</span>
 
