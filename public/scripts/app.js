@@ -3,6 +3,11 @@
  * jQuery is already loaded
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
+function escape(str) {
+  var div = document.createElement('div');
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+}
 
 $(document).ready(function() {
 
@@ -22,15 +27,10 @@ $(document).ready(function() {
   function createTweetElement(tweetData) {
     
     // 3a. Initialize the variables for 'tweet' markup
-      // 'tweet_avatar' - User Avatar
-      // 'tweet_heading' - User Name
-      // 'tweet_username' - User Handle
-      // 'tweet_content' - Text Content
-      // 'tweet_created_at' - Creation Date
     var tweet_avatar = tweetData.user.avatars["small"];
     var tweet_heading = tweetData.user.name;
     var tweet_username = tweetData.user.handle;
-    var tweet_content = tweetData.content.text;
+    var tweet_content = escape(tweetData.content.text);
     var tweet_created_at = tweetData.created_at;
 
     var formatDate= tweet_created_at;
@@ -147,6 +147,8 @@ $(document).ready(function() {
 
     // Serialize the web form data.
     var formData = $(form).serialize();
+
+
 
     // Submit the web form using AJAX.
     $.ajax({
