@@ -372,7 +372,7 @@ a:focus {
 .primary__header .logo {
   display: block;
   float: left;
-  padding: 20px 20px 20px 10px;
+  padding: 20px 0;
   border-bottom: none;
   font: 500 14px/20px "Oswald", Arial, sans-serif;
   text-decoration: none;
@@ -644,8 +644,9 @@ a:focus {
 .tweet .user_image img {
   display: inline-block;
   margin: 20px 0;
-  height: 50px;
-  width: 50px;
+  height: 55px;
+  width: 55px;
+  border-radius: 50%;
 }
 .tweet .heading {
   display: inline-block;
@@ -666,7 +667,7 @@ a:focus {
 }
 .tweet .user.right .username {
   color: #5A6D76;
-  font: normal 300 16px/1.4em "Oswald", Arial, sans-serif;
+  font: normal 300 18px/1.4em "Oswald", Arial, sans-serif;
 }
 .tweet .username {
   color: #263238;
@@ -726,7 +727,7 @@ a:focus {
   list-style: none;
 }
 .tweet .twitter_links a:link {
-  color: #263238;
+  color: #1693A5;
   border-bottom: none;
   text-decoration: none !important;
   -webkit-transition: all 0.3s ease-out;
