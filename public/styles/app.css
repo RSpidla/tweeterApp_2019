@@ -662,7 +662,7 @@ a:focus {
 .tweet .user.right {
   display: inline-block;
   width: 25%;
-  margin: 26px 0 0;
+  margin: 24px 0 0;
   padding: 20px 0;
 }
 .tweet .user.right .username {
@@ -801,6 +801,14 @@ a:focus {
   }
   .tweet .status {
     font: 300 18px/1.4em "Oswald", Arial, sans-serif;
+  }
+}
+@media only screen and (max-width: 379px) {
+  .tweet .details.left span {
+    font: 500 14px/1.4em "Oswald", Arial, sans-serif;
+  }
+  .tweet .user.right {
+    margin: 22px 0 0;
   }
 }
 /* ============================================================================= 
