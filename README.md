@@ -53,6 +53,10 @@ Details: a Single Page App (SPA) built with HTML, CSS, JS, jQuery and AJAX on th
 
 ![New Tweet, Web Form: Error Message, Content too Long](https://github.com/RSpidla/tweeterApp_2019/blob/master/docs/Tweeter_User_Message-Tweet_Content_Too_Long.jpg?raw=true)
 
+* [Tweet, On Hover - Buttons](https://github.com/RSpidla/tweeterApp_2019/blob/master/docs/Tweeter_Tweet-On_Hover.jpg?raw=true)
+
+![Tweet, On Hover - Buttons](https://github.com/RSpidla/tweeterApp_2019/blob/master/docs/Tweeter_Tweet-On_Hover.jpg?raw=true)
+
 
 ## <span style="color:#1693A5">Acknowledgments</span>
 
