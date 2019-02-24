@@ -1,0 +1,131 @@
+/* ============================================================================= 
+05. Header
+================================================================================ */
+.primary__header {
+    position: fixed;
+    z-index: 9;
+    top: 0;
+      width: calc(100% - 20px);
+      padding: 0 10px;
+    background-color: white;
+    -webkit-box-shadow: 1px 2px 4px 0 rgba(0,0,0,.15);
+      box-shadow: 1px 2px 4px 0 rgba(0,0,0,.15);
+      .header-form {
+          display: inline-block;
+          width: 50%;
+      }
+  }
+  .primary__header ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+    background-color: white;
+  }
+  .primary__header li {
+    float: left;
+  }
+  .primary__header li a {
+    display: block;
+    padding: 20px;
+    border-right: 1px solid #f4f4f4;
+    border-bottom: none;
+    color: $color-grey-1;
+    font: 500 14px/20px $sans-serif-primary;  
+    text-decoration: none;
+    text-transform: uppercase;
+    @include transition (all, 0.3s, ease-out);
+  }
+  .primary__header li a:hover,
+  .primary__header .menu-btn:hover,
+  .primary__header li a:focus,
+  .primary__header .menu-btn:hover {
+    color: $color-secondary-1-0;
+  }
+  
+  /* ============================================================================= 
+  05. Header \ Bird
+  ================================================================================ */
+  .primary__header .bird {
+      float: left;
+      display: block;
+      margin: 5px 0 0 5px;
+      padding: 5px;
+      width: 40px;
+      height: 40px;
+      border-bottom: none;
+      cursor: pointer;
+      @include transition (all, 0.3s, ease-out);
+      &:hover {
+          width: 50px;
+          height: 50px;
+          padding: 0;
+      }
+  }
+  
+  /* ============================================================================= 
+  05. Header \ Logo
+  ================================================================================ */
+  .primary__header .logo {
+    display: block;
+    float: left;
+    padding: 20px 0;
+    border-bottom: none;
+    font: 500 14px/20px $sans-serif-primary;
+    text-decoration: none;
+    text-transform: uppercase;
+    @include transition (all, 0.3s, ease-out);
+    &:link,
+    &:visited {
+      color: $color-grey-1;  
+      text-decoration: none;
+    }
+    &:hover,
+    &:focus {
+      color: $color-secondary-1-0;
+    }
+  }
+  
+  /* ============================================================================= 
+  05. Header \ Menu
+  ================================================================================ */
+  .primary__header .menu {
+      position: relative;
+      right: -10px;
+      float: right;
+      clear: none;
+      max-height: none;
+  }
+  
+  /* ============================================================================= 
+  05. Header \ Menu \ Button
+  ================================================================================ */
+  .primary__header .menu-btn {
+      display: none;
+  }
+  .primary__header .menu-btn:checked ~ .menu {
+      max-height: 260px;
+  }
+  .primary__header .menu-btn:checked ~ .menu-icon .navicon {
+      background: transparent;
+  }
+  .primary__header .menu-btn:checked ~ .menu-icon .navicon:before {
+      transform: rotate(-45deg);
+  }
+  .primary__header .menu-btn:checked ~ .menu-icon .navicon:after {
+      transform: rotate(45deg);
+  }
+  .primary__header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+  .primary__header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+      top: 0;
+  }
+  
+  /* ============================================================================= 
+  05. Header \ Media Queries
+  ================================================================================ */
+  @media only screen and (max-width: 419px) {
+    .primary__header li a {
+      padding: 20px 10px;         
+    }
+  }
+  
