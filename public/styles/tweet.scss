@@ -1,0 +1,211 @@
+.tweet {
+	display: block;
+	margin: 0 auto 40px;
+	padding: 0;
+	width: 100%;
+	max-width: 540px;
+	background: rgba(255,255,255,.9);
+	border-radius: 4px;
+	box-shadow: 0 20px 40px -14px rgba(0,0,0,0.25);
+	@include transition (all, 0.3s, ease-out);
+		&:hover,
+		&:focus {
+			max-width: 560px;
+			box-shadow: 0 20px 40px -14px rgba(0,0,0,0.90);
+			.twitter_links {
+				opacity: 1.0;
+			}
+		}
+		header,
+		footer {
+			width: calc(100% - 40px);
+			padding: 0 20px;
+			background: $color-grey-5;
+		}
+		header {
+			border-top-left-radius: 4px;
+			border-top-right-radius: 4px;
+		}
+		footer {
+			border-bottom-left-radius: 4px;
+			border-bottom-right-radius: 4px;
+			margin: 0;
+			.time,
+			.date {
+				color: $color-grey-1;
+			}
+		}
+		.user.left {
+			display: block;
+			float: left;
+			clear: both;
+			width: 75%;	
+		}
+		.user_image {
+			display: block;
+			float: left;
+			clear: both;
+			width: 70px;
+			img {
+				display: inline-block;
+				margin: 20px 0;
+				height: 55px;
+				width: 55px;
+				border-radius: 50%;
+			}
+		}
+		.heading {
+			display: inline-block;
+			width: 75%;
+			padding: 40px 0 0;
+			h3 {
+				margin: 0 0 20px;
+				padding: 0 0 10px;
+				color: $color-grey-1;
+				text-transform: uppercase;		
+			}
+		}
+		.user.right {
+			display: inline-block;
+			width: 25%;
+			margin: 24px 0 0;
+			padding: 20px 0;
+			.username {
+				color: $color-grey-3;
+				font: normal 300 18px/1.4em $sans-serif-primary;
+			}	
+		}
+		.username {
+			color: $color-grey-1;
+		}
+		.status {
+			margin: 20px;
+      color: $color-grey-1;
+      overflow-wrap: break-word;
+      font: 300 20px/1.4em $sans-serif-primary;            
+		}
+		.details.left {
+			display: block;
+			float: left;
+			clear: both;
+			width: 50%;	
+			span {
+				display: block;
+				margin: 18px 0;
+				color: $color-grey-1;
+				font: 500 18px/1.4em $sans-serif-primary;
+				text-transform: uppercase;
+			}
+		}
+		.details.left:after {
+			content: "";
+			display: table;
+			clear: both;
+		}
+		.details.right {
+			display: inline-block;
+			width: 50%;	
+		}
+    .twitter_links {
+			margin: 18px 0;
+			padding: 0;
+			width: 100%;
+			display: block;
+			text-align: right;
+			opacity: 0.0;
+			@include transition (all, 0.3s, ease-out);
+		}
+		.twitter_links.show {
+			opacity: 1.0;
+		}
+		.twitter_links:hover,
+		.twitter_links:focus {
+			opacity: 1.0;
+		}
+		.twitter_links li {
+			margin: 0 15px 0 0;
+			padding: 0;
+			display: inline-block;
+			list-style: none;
+		}
+		.twitter_links a:link {
+			color: $color-secondary-3-0;
+			border-bottom: none;
+			text-decoration:  none !important;
+			@include transition (all, 0.3s, ease-out);
+		}
+		.twitter_links a:hover,
+		.twitter_links a:visited:hover,
+		.twitter_links a:focus,
+		.twitter_links a:visited:focus {
+			background: none;
+			text-decoration: none;
+			color: $color-secondary-1-0;
+		}
+		.twitter_links a:visited {
+			color: $color-secondary-3-0;
+		}
+		.twitter_links li span {
+			display: none;
+		}
+		.twitter_links li:last-child {
+			margin: 0;
+		}
+}
+.retweet-icon:before,
+.like-icon:before,
+.flag-icon:before,
+.compose-icon:before {
+	content: "\f0c3"; 
+	font-family: FontAwesome;
+	font-style: normal;
+	font-weight: normal;
+	text-decoration: inherit;
+	font-size: 1.50rem;
+	position: relative;
+	top: 0;
+	left: 0;
+	text-shadow: 0 1px 1px rgba(0,0,0,0.3);
+}
+.retweet-icon:before {
+	content: "\f079";
+}
+.like-icon:before {
+	content: "\f004";
+}
+.flag-icon:before {
+	content: "\f024";
+}
+.compose-icon:before {
+	content: "\f14b";
+	font-size: 1.25rem;
+	left: -5px;
+	top: 0px;
+}
+@media only screen and (max-width: 799px) {
+	.tweet {
+		.heading {
+			width: calc(100% - 70px);
+		}
+		.user.right {
+			.username {
+				font: normal 300 14px/1.4em $sans-serif-primary;
+			}	
+		}
+		.status {
+			font: 300 18px/1.4em $sans-serif-primary;
+		}
+	}
+}
+@media only screen and (max-width: 379px) {
+	.tweet {
+		.details.left {
+			span {
+				font: 500 14px/1.4em $sans-serif-primary;
+			}
+		}
+		.user.right {
+			margin: 22px 0 0;
+		}
+	}
+}
