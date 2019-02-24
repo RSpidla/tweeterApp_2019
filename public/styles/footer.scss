@@ -1,0 +1,48 @@
+/* ============================================================================= 
+06. Footer
+================================================================================ */
+.primary__footer {
+    background-color: white;
+    -webkit-box-shadow: 1px -2px 4px 0 rgba(0,0,0,.15);
+    box-shadow: 1px -2px 4px 0 rgba(0,0,0,.15);
+    color: $color-grey-1;
+  }
+  .copyright {
+    display: inline-block;
+    margin: 0;
+    padding: 20px;
+    font: 500 14px/20px "Oswald", Arial, sans-serif;
+    text-decoration: none;
+    text-transform: uppercase;
+    a:link {
+      color: $color-grey-1;  
+      text-decoration: none;
+      border-bottom: none;
+    }
+    a:visited {
+      color: $color-grey-1; 
+      text-decoration: none;
+    }
+    a:hover,
+    a:focus {
+      color: $color-secondary-1-0;  
+      text-decoration: none;
+    }
+  }
+  
+  /* ============================================================================= 
+  06. Footer \ Media Queries
+  ================================================================================ */
+  @media only screen and (max-width: 599px) {
+    .copyright {
+      width: calc(100% - 20px);
+      padding: 20px 10px 0;
+      text-align: center;
+    }
+  }
+  @media only screen and (max-width: 379px) {
+    .copyright {
+      font-size: 12px;
+    }
+  }
+  
